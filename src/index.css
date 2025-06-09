@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@import 'leaflet/dist/leaflet.css';
+
+@keyframes progress {
+    from { width: 100%; }
+    to { width: 0%; }
+  }
+  
+  .shadow-glow {
+    filter: drop-shadow(0 0 6px currentColor);
+  }
+  
+  .animate-progress {
+    animation: progress 3s linear forwards;
+  }
+  
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+  }
+  
+  .accent-purple-500 {
+    accent-color: #a855f7;
+  }
+  .truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }

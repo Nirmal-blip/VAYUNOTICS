@@ -1,0 +1,73 @@
+{
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "description": "This is ardupilot ground control station (GCS) application for Vayunotics.",
+  "author": "Vayunotics",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "start": "npm run build && npm run electron",
+    "dist": "electron-builder",
+    "electron": "electron ."
+  },
+  "dependencies": {
+    "@react-google-maps/api": "^2.20.6",
+    "@react-three/drei": "^9.122.0",
+    "@react-three/fiber": "^8.18.0",
+    "@tailwindcss/vite": "^4.1.5",
+    "@vis.gl/react-google-maps": "^1.5.2",
+    "axios": "^1.8.4",
+    "framer-motion": "^12.5.0",
+    "leaflet": "^1.9.4",
+    "lucide-react": "^0.479.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.5.2",
+    "react-icons": "^5.5.0",
+    "react-leaflet": "^4.2.1",
+    "react-leaflet-google-layer": "^4.0.0",
+    "react-router-dom": "^7.4.0",
+    "react-webcam": "^7.2.0",
+    "sass": "^1.85.1",
+    "socket.io-client": "^4.8.1",
+    "sweetalert2": "^11.21.0",
+    "tailwindcss": "^4.0.13",
+    "three": "^0.174.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.4.1",
+    "electron": "^36.1.0",
+    "electron-builder": "^26.0.12",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "path": "^0.12.7",
+    "vite": "^5.4.19"
+  },
+  "build": {
+    "appId": "com.vayunotics.app",
+    "productName": "VayunoticsApp",
+    "win": {
+      "target": "nsis"
+    },
+    "files": [
+      "dist/**/*",
+      "main.js",
+      "backend/**/*"
+    ],
+    "asarUnpack": [
+      "backend/**/*"
+    ],
+    "directories": {
+      "output": "dist_electron"
+    }
+  }
+}
